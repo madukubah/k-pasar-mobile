@@ -1,5 +1,5 @@
-import 'package:fluttecore/activity/blank_page/interactor/BlankMVPInteractor.dart';
-import 'package:fluttecore/activity/blank_page/view/BlankMVPView.dart';
+import 'package:k_pasar/activity/blank_page/interactor/BlankMVPInteractor.dart';
+import 'package:k_pasar/activity/blank_page/view/BlankMVPView.dart';
 
 abstract class BlankMVPPresenter < V extends BlankMVPView , I extends BlankMVPInteractor > 
 {

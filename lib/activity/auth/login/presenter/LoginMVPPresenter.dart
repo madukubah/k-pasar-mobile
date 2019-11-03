@@ -1,6 +1,6 @@
-import 'package:fluttecore/base/interactor/MVPInteractor.dart';
-import 'package:fluttecore/base/presenter/MVPPresenter.dart';
-import 'package:fluttecore/base/view/MVPView.dart';
+import 'package:k_pasar/base/interactor/MVPInteractor.dart';
+import 'package:k_pasar/base/presenter/MVPPresenter.dart';
+import 'package:k_pasar/base/view/MVPView.dart';
 
 abstract class LoginMVPPresenter< V extends MVPView , I extends MVPInteractor > extends MVPPresenter< V, I >
 {

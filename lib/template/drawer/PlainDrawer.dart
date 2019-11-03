@@ -1,13 +1,14 @@
 
-import 'package:fluttecore/data/preferences/AppPreferenceHelper.dart';
-import 'package:fluttecore/template/drawer/Menu.dart';
+import 'package:k_pasar/data/preferences/AppPreferenceHelper.dart';
+import 'package:k_pasar/template/drawer/Menu.dart';
 import 'package:flutter/material.dart';
 
 class PlainDrawer extends StatefulWidget {
   final ValueChanged<Menu> onTap;
   final List<Menu> menus;
+  final bool isLoggedIn;
 
-  const PlainDrawer({Key key, this.menus, this.onTap}) : super(key: key);
+  const PlainDrawer({Key key, this.menus, this.onTap, this.isLoggedIn = false}) : super(key: key);
 
   @override
   _PlainDrawerState createState() =>
@@ -19,7 +20,10 @@ class _PlainDrawerState extends State<PlainDrawer> {
   List<InkWell> listMenu = List();
   AppPreferenceHelper preferenceHelper = AppPreferenceHelper.getInstance();
   _createList() async {
-    drawer = [
+
+    if( this.widget.isLoggedIn )
+    {
+       drawer = [
        new UserAccountsDrawerHeader(
               onDetailsPressed: (){
                 this.widget.onTap( Menu(title: "Profil", routename: "/Profile") );
@@ -36,12 +40,15 @@ class _PlainDrawerState extends State<PlainDrawer> {
                 ),
               ),
               decoration: new BoxDecoration(
-                image: new DecorationImage(image: new NetworkImage("https://image.freepik.com/free-vector/abstract-colorful-pattern-shape-design-background_38782-954.jpg"),
+                image: new DecorationImage(
+                  image: new NetworkImage("https://image.freepik.com/free-vector/abstract-colorful-pattern-shape-design-background_38782-954.jpg"),
                 fit: BoxFit.cover
                 )
               ),
             ),
-    ];
+        ];
+    }
+   
 
     for (var i = 0; i < this.widget.menus.length; i++) {
       listMenu.add(
@@ -56,6 +63,7 @@ class _PlainDrawerState extends State<PlainDrawer> {
         ),
       );
     }
+
     Menu logout = Menu(title: "Keluar", routename: "/Logout", icon: Icons.arrow_right );
     listMenu.add(
         new InkWell(

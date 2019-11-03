@@ -1,5 +1,5 @@
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 abstract class MVPInteractor {
   Future< bool > isUserLoggedIn(  );

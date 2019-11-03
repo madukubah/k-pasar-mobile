@@ -1,14 +1,15 @@
-import 'package:fluttecore/activity/auth/register/interactor/RegisterInteractor.dart';
-import 'package:fluttecore/activity/auth/register/presenter/RegisterPresenter.dart';
-import 'package:fluttecore/activity/auth/register/view/RegisterMVPView.dart';
-import 'package:fluttecore/data/network/AppApiHelper.dart';
-import 'package:fluttecore/data/preferences/AppPreferenceHelper.dart';
-import 'package:fluttecore/model/Group.dart';
-import 'package:fluttecore/template/form/MyForm.dart';
-import 'package:fluttecore/template/form/MyFormBuilder.dart';
+import 'package:k_pasar/activity/auth/register/interactor/RegisterInteractor.dart';
+import 'package:k_pasar/activity/auth/register/presenter/RegisterPresenter.dart';
+import 'package:k_pasar/activity/auth/register/view/RegisterMVPView.dart';
+import 'package:k_pasar/data/network/AppApiHelper.dart';
+import 'package:k_pasar/data/preferences/AppPreferenceHelper.dart';
+import 'package:k_pasar/model/Group.dart';
+import 'package:k_pasar/template/form/MyForm.dart';
+import 'package:k_pasar/template/form/MyFormBuilder.dart';
 import 'package:flutter/material.dart';
 // import 'package:login/home_page.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'interactor/RegisterMVPInteractor.dart';
 
@@ -102,7 +103,7 @@ class _RegisterPageState extends State<RegisterPage>
                 }
               },
         padding: EdgeInsets.all(12),
-        color: Colors.lightBlueAccent,
+        color: AppColor.PRIMARY,
         child: Text('Register', style: TextStyle(color: Colors.white)),
       ),
     );
@@ -190,4 +191,5 @@ class _RegisterPageState extends State<RegisterPage>
       this.isGroupsShowed = true;
     });
   }
+  
 }

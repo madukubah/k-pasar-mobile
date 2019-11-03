@@ -1,4 +1,4 @@
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'PreferenceHelper.dart';
@@ -7,6 +7,8 @@ class AppPreferenceHelper extends PreferenceHelper
 {
   static const PREF_KEY_USER_LOGGED_IN_MODE = "PREF_KEY_USER_LOGGED_IN_MODE";
   static const PREF_KEY_CURRENT_USER_ID = "PREF_KEY_CURRENT_USER_ID";
+  static const PREF_KEY_CURRENT_GROUP_ID = "PREF_KEY_CURRENT_GROUP_ID";
+
   static const PREF_KEY_ACCESS_TOKEN = "PREF_KEY_ACCESS_TOKEN";
   static const PREF_KEY_CURRENT_USER_NAME = "PREF_KEY_CURRENT_USER_NAME";
   static const PREF_KEY_CURRENT_USER_EMAIL = "PREF_KEY_CURRENT_USER_EMAIL";
@@ -164,6 +166,19 @@ class AppPreferenceHelper extends PreferenceHelper
   @override
   void setCurrentUserLastName(String lastName) {
     sharedPreferences.setString(PREF_KEY_CURRENT_USER_LNAME, lastName);
+  }
+
+  @override
+  int getCurrentgroupId() {
+    var groupId = sharedPreferences.getInt( PREF_KEY_CURRENT_GROUP_ID );
+      if( groupId == AppConstants.NULL_INDEX ) return null;
+      return groupId;
+  }
+
+  @override
+  void setCurrentgroupId(int groupId) {
+    groupId = ( groupId == null ) ? AppConstants.NULL_INDEX : groupId ;
+    sharedPreferences.setInt(PREF_KEY_CURRENT_GROUP_ID, groupId);
   }
   
 }

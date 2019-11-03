@@ -1,10 +1,13 @@
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 abstract class PreferenceHelper {
   int getCurrentUserLoggedInMode(  );
   void setCurrentUserLoggedInMode( LoggedInMode mode );
   int getCurrentUserId(  );
   void setCurrentUserId( int userId );
+
+  int getCurrentgroupId(  );
+  void setCurrentgroupId( int groupId );
 
   String getCurrentUserName(  );
   void setCurrentUserName( String userName );
@@ -30,6 +33,7 @@ abstract class PreferenceHelper {
   String getCurrentUserLastName(  );
   void setCurrentUserLastName( String lastName );
 
+  
   String getCurrentUserGroupName(  );
   void setCurrentUserGroupName( String groupName );
 

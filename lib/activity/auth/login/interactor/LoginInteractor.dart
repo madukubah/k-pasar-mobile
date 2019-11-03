@@ -1,10 +1,10 @@
-import 'package:fluttecore/base/interactor/BaseInteractor.dart';
-import 'package:fluttecore/data/network/ApiHelper.dart';
-import 'package:fluttecore/data/network/LoginRequest.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/data/preferences/PreferenceHelper.dart';
-import 'package:fluttecore/model/User.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/base/interactor/BaseInteractor.dart';
+import 'package:k_pasar/data/network/ApiHelper.dart';
+import 'package:k_pasar/data/network/LoginRequest.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/data/preferences/PreferenceHelper.dart';
+
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'LoginMVPInteractor.dart';
 

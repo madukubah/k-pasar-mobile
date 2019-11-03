@@ -4,7 +4,7 @@ class User {
   final String email;
   final String user_fullname;
   final String image;
-  final String groups_id;
+  final int groupId;
   final String group_name;
 
   final String first_name;
@@ -16,7 +16,7 @@ class User {
       this.email,
       this.user_fullname,
       this.image,
-      this.groups_id,
+      this.groupId,
 
       this.first_name,
       this.group_name,
@@ -26,11 +26,11 @@ class User {
 
   User.fromMap(Map<String, dynamic> map)
       : id = int.parse(  map['id'] ),
+        groupId = int.parse(  map['group_id'] ) ,
         phone = map['phone'] ,
         email = map['email'] ,
         user_fullname = map['user_fullname'] ,
         image = map['image'] ,
-        groups_id = map['groups_id'] ,
 
         first_name = map['first_name'] ,
         last_name = map['last_name'] ,

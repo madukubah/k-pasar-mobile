@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:fluttecore/base/interactor/BaseInteractor.dart';
-import 'package:fluttecore/data/network/ApiHelper.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/data/preferences/PreferenceHelper.dart';
-import 'package:fluttecore/model/User.dart';
+import 'package:k_pasar/base/interactor/BaseInteractor.dart';
+import 'package:k_pasar/data/network/ApiHelper.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/data/preferences/PreferenceHelper.dart';
+import 'package:k_pasar/model/User.dart';
 
 import 'ProfileMVPInteractor.dart';
 
@@ -43,8 +43,9 @@ class ProfileInteractor extends BaseInteractor implements ProfileMVPInteractor
   }
 
   @override
-  Future<LoginResponse> doUploadImage(File image) {
-    return this.apiHelper.performUserUploadImage(image).then( ( LoginResponse loginResponse ) {
+  Future<LoginResponse> doUploadImage(File image) async  {
+    int userId = preferenceHelper.getCurrentUserId();
+    return this.apiHelper.performUserUploadImage(image, userId ).then( ( LoginResponse loginResponse ) {
       return loginResponse;
     });
   }

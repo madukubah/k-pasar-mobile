@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:fluttecore/base/interactor/MVPInteractor.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/model/User.dart';
+import 'package:k_pasar/base/interactor/MVPInteractor.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/model/User.dart';
 
 abstract class ProfileMVPInteractor extends MVPInteractor {
   // Future<dynamic> doServerProfileApiCall( Object registerData );

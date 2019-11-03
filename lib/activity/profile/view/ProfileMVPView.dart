@@ -1,6 +1,6 @@
-import 'package:fluttecore/base/view/MVPView.dart';
-import 'package:fluttecore/model/User.dart';
-// import 'package:fluttecore/model/Group.dart';
+import 'package:k_pasar/base/view/MVPView.dart';
+import 'package:k_pasar/model/User.dart';
+// import 'package:k_pasar/model/Group.dart';
 
 abstract class ProfileMVPView extends MVPView {
   void showMessage( String message, int status );

@@ -1,5 +1,5 @@
-import 'package:fluttecore/base/interactor/MVPInteractor.dart';
-import 'package:fluttecore/base/view/MVPView.dart';
+import 'package:k_pasar/base/interactor/MVPInteractor.dart';
+import 'package:k_pasar/base/view/MVPView.dart';
 
 import 'MVPPresenter.dart';
 

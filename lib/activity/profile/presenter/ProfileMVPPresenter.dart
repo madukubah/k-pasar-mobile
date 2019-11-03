@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:fluttecore/activity/profile/interactor/ProfileMVPInteractor.dart';
-import 'package:fluttecore/activity/profile/view/ProfileMVPView.dart';
+import 'package:k_pasar/activity/profile/interactor/ProfileMVPInteractor.dart';
+import 'package:k_pasar/activity/profile/view/ProfileMVPView.dart';
 
 abstract class ProfileMVPPresenter < V extends ProfileMVPView , I extends ProfileMVPInteractor > 
 {

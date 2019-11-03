@@ -1,5 +1,5 @@
-import 'package:fluttecore/base/view/MVPView.dart';
-import 'package:fluttecore/model/Group.dart';
+import 'package:k_pasar/base/view/MVPView.dart';
+import 'package:k_pasar/model/Group.dart';
 
 abstract class RegisterMVPView extends MVPView {
   void showMessage( String message, int status );

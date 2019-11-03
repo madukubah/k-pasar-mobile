@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed( '/LoginPage');
+    // Navigator.of(context).pushReplacementNamed( '/LoginPage');
+    Navigator.of(context).pushReplacementNamed( '/Home');
   }
   @override
   void initState() {

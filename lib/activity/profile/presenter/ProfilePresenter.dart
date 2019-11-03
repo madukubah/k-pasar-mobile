@@ -1,12 +1,12 @@
 
 import 'dart:io';
 
-import 'package:fluttecore/activity/profile/interactor/ProfileMVPInteractor.dart';
-import 'package:fluttecore/activity/profile/view/ProfileMVPView.dart';
-import 'package:fluttecore/base/presenter/BasePresenter.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/model/User.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/activity/profile/interactor/ProfileMVPInteractor.dart';
+import 'package:k_pasar/activity/profile/view/ProfileMVPView.dart';
+import 'package:k_pasar/base/presenter/BasePresenter.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/model/User.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'ProfileMVPPresenter.dart';
 
@@ -37,6 +37,7 @@ class ProfilePresenter < V extends ProfileMVPView , I extends ProfileMVPInteract
 
     this.getView().showProgress();
     interactor.doServerUpdateUser( userData ).then( ( LoginResponse loginResponse ){
+      print("loginResponse $loginResponse");
       if( loginResponse == null ) return;
 
       if( loginResponse.status == 1 )   

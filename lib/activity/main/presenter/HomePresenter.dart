@@ -1,7 +1,10 @@
 
-import 'package:fluttecore/activity/main/interactor/HomeMVPInteractor.dart';
-import 'package:fluttecore/activity/main/view/HomeMVPView.dart';
-import 'package:fluttecore/base/presenter/BasePresenter.dart';
+import 'dart:async';
+
+import 'package:k_pasar/activity/main/interactor/HomeMVPInteractor.dart';
+import 'package:k_pasar/activity/main/view/HomeMVPView.dart';
+import 'package:k_pasar/base/presenter/BasePresenter.dart';
+import 'package:k_pasar/model/Adverticement.dart';
 
 import 'HomeMVPPresenter.dart';
 
@@ -16,33 +19,27 @@ class HomePresenter < V extends HomeMVPView , I extends HomeMVPInteractor > exte
     interactor.isUserLoggedIn().then( ( bool loggedIn ){
       print( "loggedIn $loggedIn" );
       if( !loggedIn ) 
-        this.getView().toLoginPage(  );
+        this.getView().onIsUserLogin(loggedIn);
+        // this.getView().toLoginPage(  );
     } );
   }
 
-  // @override
-  // void onServerHomeClicked(Object registerData) {
-  //   this.getView().showProgress();  
-  //   interactor.doServerHomeApiCall( registerData ).then( ( dynamic response ){
-  //       if( response["message"] == null ) return;
+   @override
+  Future start() async {
+    interactor.getAdverticement().then( (List<Adverticement> result ){
+      if( !result.isEmpty ) 
+      {
+          this.getView().onLoadAdverticement(result);
+      }
+    });
 
-  //       this.getView().hideProgress();  
-  //       int status = response["status"];//int.parse( response["status"] );
-  //       String message =  response["message"];
-  //       this.getView().showMessage( message.trimRight().trimLeft(), status );
-        
-  //   });
-  //   print( registerData );
-  // }
-
-  // @override
-  // void getGroups() {
-  //   // this.getView().showProgress(); 
-  //   interactor.getGroups().then(( List<Group> groups ){
-  //     print( groups[0].name ); 
-  //     this.getView().attachGroups( groups );
-  //     // return groups;  
-  //   });
-  // }
+    var _duration = new Duration(seconds: 1);
+    return new Timer(_duration, (){
+        interactor.isUserLoggedIn().then( ( bool loggedIn ){
+          print( "isUserLoggedIn ${ loggedIn }" );
+          this.getView().onIsUserLogin(loggedIn);
+        } );
+    });
+  }
   
 }

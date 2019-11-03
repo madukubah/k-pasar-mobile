@@ -1,8 +1,8 @@
-import 'package:fluttecore/data/network/ApiHelper.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/data/preferences/PreferenceHelper.dart';
-import 'package:fluttecore/model/User.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/data/network/ApiHelper.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/data/preferences/PreferenceHelper.dart';
+import 'package:k_pasar/model/User.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'MVPInteractor.dart';
 
@@ -16,7 +16,6 @@ class BaseInteractor extends MVPInteractor
   
   @override
   Future< bool > isUserLoggedIn() async {
-    
     return  this.preferenceHelper.getCurrentUserLoggedInMode() != LoggedInMode.LOGGED_IN_MODE_LOGGED_OUT.index;
   }
 
@@ -26,6 +25,8 @@ class BaseInteractor extends MVPInteractor
     this.preferenceHelper.setCurrentUserId( null );
     this.preferenceHelper.setAccessToken( "" );
     this.preferenceHelper.setCurrentUserEmail( "" );
+    this.preferenceHelper.setCurrentUserPhone( "");
+    this.preferenceHelper.setCurrentUserName( "");
     this.preferenceHelper.setCurrentUserImage( "assets/images/as.png" );
   }
 
@@ -35,6 +36,8 @@ class BaseInteractor extends MVPInteractor
     if( user != null )
     {
         preferenceHelper.setCurrentUserId( user.id );
+        preferenceHelper.setCurrentgroupId( user.groupId );
+
         preferenceHelper.setCurrentUserName( user.user_fullname );
         preferenceHelper.setCurrentUserEmail( user.email );
         preferenceHelper.setCurrentUserPhone( user.phone );

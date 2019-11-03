@@ -1,14 +1,14 @@
 import 'dart:io';
 // import 'dart:io' as dir;
 
-import 'package:fluttecore/activity/profile/interactor/ProfileInteractor.dart';
-import 'package:fluttecore/activity/profile/presenter/ProfilePresenter.dart';
-import 'package:fluttecore/activity/profile/view/ProfileMVPView.dart';
-import 'package:fluttecore/data/network/AppApiHelper.dart';
-import 'package:fluttecore/data/preferences/AppPreferenceHelper.dart';
-import 'package:fluttecore/model/User.dart';
-import 'package:fluttecore/template/form/MyForm.dart';
-import 'package:fluttecore/template/form/MyFormBuilder.dart';
+import 'package:k_pasar/activity/profile/interactor/ProfileInteractor.dart';
+import 'package:k_pasar/activity/profile/presenter/ProfilePresenter.dart';
+import 'package:k_pasar/activity/profile/view/ProfileMVPView.dart';
+import 'package:k_pasar/data/network/AppApiHelper.dart';
+import 'package:k_pasar/data/preferences/AppPreferenceHelper.dart';
+import 'package:k_pasar/model/User.dart';
+import 'package:k_pasar/template/form/MyForm.dart';
+import 'package:k_pasar/template/form/MyFormBuilder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:path_provider/path_provider.dart';
@@ -427,7 +427,6 @@ class _ProfileState extends State<Profile>
     }
     else
       print( "tidak ada gambar" );
-    
   }
     void _openImagePickerModal(BuildContext context) {
     final flatButtonColor = Theme.of(context).primaryColor;

@@ -1,6 +1,6 @@
-import 'package:fluttecore/base/interactor/MVPInteractor.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/base/interactor/MVPInteractor.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 abstract class LoginMVPInteractor extends MVPInteractor
 {

@@ -1,11 +1,12 @@
-import 'package:fluttecore/activity/auth/login/presenter/LoginPresenter.dart';
-import 'package:fluttecore/activity/auth/login/view/LoginMVPView.dart';
-import 'package:fluttecore/data/network/AppApiHelper.dart';
-import 'package:fluttecore/data/preferences/AppPreferenceHelper.dart';
-import 'package:fluttecore/template/form/MyForm.dart';
-import 'package:fluttecore/template/form/MyFormBuilder.dart';
+import 'package:k_pasar/activity/auth/login/presenter/LoginPresenter.dart';
+import 'package:k_pasar/activity/auth/login/view/LoginMVPView.dart';
+import 'package:k_pasar/data/network/AppApiHelper.dart';
+import 'package:k_pasar/data/preferences/AppPreferenceHelper.dart';
+import 'package:k_pasar/template/form/MyForm.dart';
+import 'package:k_pasar/template/form/MyFormBuilder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'interactor/LoginInteractor.dart';
 import 'interactor/LoginMVPInteractor.dart';
@@ -30,13 +31,13 @@ class _LoginPageState extends State<LoginPage> implements LoginMVPView {
         type: MyForm.TYPE_NUMBER,
         name: "phone",
         label: "NO HP",
-        value: "081342989100",
+        value: "081342989179",
         ),
     MyForm(
         type: MyForm.TYPE_PASSWORD,
         name: "password",
         label: "Password",
-        value: "081342989100"),
+        value: "yuhu123"),
   ];
 
   _LoginPageState() {
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> implements LoginMVPView {
           }
         },
         padding: EdgeInsets.all(12),
-        color: Colors.lightBlueAccent,
+        color: AppColor.PRIMARY,
         child: Text('Log In', style: TextStyle(color: Colors.white)),
       ),
     );
@@ -133,7 +134,6 @@ class _LoginPageState extends State<LoginPage> implements LoginMVPView {
 
   @override
   void hideProgress() {
-    
     Navigator.pop(context);
   }
 
@@ -151,7 +151,11 @@ class _LoginPageState extends State<LoginPage> implements LoginMVPView {
       ),
     );
   }
-
+   @override
+  void dispose() {
+    debugPrint('disposed...');
+    super.dispose();
+  }
   @override
   void showValidationMessage(int errorCode) {
     // TODO: implement showValidationMessage

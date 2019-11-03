@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:fluttecore/activity/auth/login/interactor/LoginMVPInteractor.dart';
-import 'package:fluttecore/activity/auth/login/view/LoginMVPView.dart';
-import 'package:fluttecore/base/presenter/BasePresenter.dart';
-import 'package:fluttecore/data/network/response/LoginResponse.dart';
-import 'package:fluttecore/util/AppConstants.dart';
+import 'package:k_pasar/activity/auth/login/interactor/LoginMVPInteractor.dart';
+import 'package:k_pasar/activity/auth/login/view/LoginMVPView.dart';
+import 'package:k_pasar/base/presenter/BasePresenter.dart';
+import 'package:k_pasar/data/network/response/LoginResponse.dart';
+import 'package:k_pasar/util/AppConstants.dart';
 
 import 'LoginMVPPresenter.dart';
 

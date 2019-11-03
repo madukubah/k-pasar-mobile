@@ -1,8 +1,8 @@
-import 'package:fluttecore/activity/auth/register/interactor/RegisterMVPInteractor.dart';
-import 'package:fluttecore/activity/auth/register/view/RegisterMVPView.dart';
-import 'package:fluttecore/base/interactor/MVPInteractor.dart';
-import 'package:fluttecore/base/presenter/BasePresenter.dart';
-import 'package:fluttecore/model/Group.dart';
+import 'package:k_pasar/activity/auth/register/interactor/RegisterMVPInteractor.dart';
+import 'package:k_pasar/activity/auth/register/view/RegisterMVPView.dart';
+import 'package:k_pasar/base/interactor/MVPInteractor.dart';
+import 'package:k_pasar/base/presenter/BasePresenter.dart';
+import 'package:k_pasar/model/Group.dart';
 
 import 'RegisterMVPPresenter.dart';
 

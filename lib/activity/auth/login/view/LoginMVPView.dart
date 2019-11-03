@@ -1,4 +1,4 @@
-import 'package:fluttecore/base/view/MVPView.dart';
+import 'package:k_pasar/base/view/MVPView.dart';
 
 abstract class LoginMVPView extends MVPView
 {

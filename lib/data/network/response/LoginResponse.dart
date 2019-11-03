@@ -1,4 +1,4 @@
-import 'package:fluttecore/model/User.dart';
+import 'package:k_pasar/model/User.dart';
 
 class LoginResponse
 {

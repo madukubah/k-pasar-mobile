@@ -1,6 +1,6 @@
-import 'package:fluttecore/base/interactor/BaseInteractor.dart';
-import 'package:fluttecore/data/network/ApiHelper.dart';
-import 'package:fluttecore/data/preferences/PreferenceHelper.dart';
+import 'package:k_pasar/base/interactor/BaseInteractor.dart';
+import 'package:k_pasar/data/network/ApiHelper.dart';
+import 'package:k_pasar/data/preferences/PreferenceHelper.dart';
 
 import 'BlankMVPInteractor.dart';
 

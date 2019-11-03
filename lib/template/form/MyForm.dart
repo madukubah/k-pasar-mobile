@@ -6,6 +6,7 @@ class MyForm {
   static const String TYPE_EMAIL = "email";
   static const String TYPE_NUMBER = "number";
   static const String TYPE_SELECT = "select";
+  static const String TYPE_DATE_PICKTER = "date-picker";
   final String type;
   final String label;
   final String name;
